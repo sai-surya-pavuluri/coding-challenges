@@ -15,4 +15,10 @@ class Solution {
         }
         return optimalGap;
     }
+
+    public static void main(String[] args){
+        Solution obj = new Solution();
+        System.out.println(obj.solution(9));
+
+    }
 }
