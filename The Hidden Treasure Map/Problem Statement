@@ -1,0 +1,38 @@
+Story: The Hidden Treasure Map
+You are the captain of a treasure-hunting ship, and you've come across an ancient treasure map with multiple locations encoded as strings of symbols. Each symbol represents a unique direction or landmark, and some of these paths overlap with one another.
+
+Your crew has discovered that one of the symbols in the string represents the starting point of a treasure trail, and the string itself leads to a chest hidden at the end. However, only some paths contain actual treasure, while others lead to traps or empty sites. Your task is to organize these paths and efficiently find the locations that contain treasure.
+
+Task:
+You are given a list of strings where each string represents a possible path on the map.
+Some paths may be prefixes of other paths.
+Some paths lead to treasure, and some do not.
+
+Write a function that builds a Trie (Prefix Tree) to represent all the possible paths.
+Implement a search function to determine if a given path leads to a treasure.
+Requirements:
+Build a Trie:
+Insert all the given paths into the Trie.
+Mark the paths that contain treasure.
+Search for Treasure:
+Given a query string, search the Trie to check if it leads to a treasure.
+Example:
+Paths provided:
+
+arduino
+Copy code
+"gold",
+"silver",
+"golden",
+"goldfish",
+"treasure"
+
+Queries:
+
+"gold" → Leads to treasure
+"golden" → No treasure here
+"silver" → Leads to treasure
+"goldfish" → No treasure here
+"treasure" → Leads to treasure
+Bonus Challenge:
+Implement a function that returns all the paths that lead to treasure from a given prefix (e.g., if the query is "g", return both "gold" and "goldfish").
