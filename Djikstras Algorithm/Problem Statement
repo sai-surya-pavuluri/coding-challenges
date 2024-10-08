@@ -1,0 +1,41 @@
+**Shortest Path Finder Using Dijkstra's Algorithm**
+
+You are tasked with developing a program that finds the shortest paths from a starting node to all other nodes in a graph. The graph is represented by a **distance matrix**, where each element `distanceMatrix[i][j]` represents the distance between node `i` and node `j`. Your goal is to implement **Dijkstra's Algorithm** to solve this problem efficiently.
+
+#### Input:
+- The first input is the number of nodes, **N**, in the graph.
+- Next, the distance between every pair of nodes will be inputted by the user. The user must provide non-negative values for all edge distances. If `i == j`, the distance is automatically set to **0** (i.e., no self-loops).
+- Finally, the user must specify the **starting node** from which the shortest paths to all other nodes will be calculated.
+
+#### Output:
+- The program should output the shortest distance from the starting node to all other nodes as an array.
+
+#### Constraints:
+1. The graph is represented as a **complete** graph where there is an edge between every pair of nodes.
+2. The distance values between nodes are non-negative (i.e., no negative weights).
+3. The number of nodes, **N**, will be reasonably small (e.g., 1 <= N <= 1000).
+
+#### Objective:
+Using **Dijkstra's Algorithm**, the program will compute the shortest path from the specified starting node to every other node in the graph. This is an optimization problem where the program should ensure efficiency and correctness in updating the shortest distances for all nodes.
+
+#### Example:
+- **Input:**
+  ```
+  Please enter the number of nodes in your graph: 4
+  Enter the distance between nodes 0 and 1: 10
+  Enter the distance between nodes 0 and 2: 5
+  Enter the distance between nodes 0 and 3: 9
+  Enter the distance between nodes 1 and 2: 3
+  Enter the distance between nodes 1 and 3: 4
+  Enter the distance between nodes 2 and 3: 2
+  Provide the starting node: 0
+  ```
+  
+- **Output:**
+  ```
+  Shortest paths from node 0: [0, 8, 5, 7]
+  ```
+
+In this example, the shortest distance from node 0 to node 1 is **8**, to node 2 is **5**, and to node 3 is **7**. 
+
+This challenge tests your ability to implement and optimize Dijkstra's algorithm, while ensuring that the program handles user input and constraints efficiently.
