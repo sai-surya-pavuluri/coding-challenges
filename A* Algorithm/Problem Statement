@@ -1,0 +1,47 @@
+"Treasure Hunt in the Enchanted Forest"
+
+#### Background:
+In a magical world filled with mysteries and treasures, a brave adventurer named Elara sets out on a quest to find the legendary **Crystal of Light** hidden deep within the **Enchanted Forest**. The forest is known for its winding paths, treacherous terrain, and magical creatures that guard the way. To succeed in her quest, Elara must navigate through the forest efficiently, avoiding dangers while seeking the quickest path to the treasure.
+
+#### Challenge:
+You are tasked with implementing an **A* pathfinding algorithm** to help Elara navigate through the Enchanted Forest. The forest can be represented as a grid of nodes, where each node corresponds to a location in the forest. Some paths between the nodes are blocked or have higher traversal costs due to obstacles like rivers, thorny bushes, and magical barriers.
+
+#### Input:
+1. **Grid Representation**: A 2D grid where:
+   - Each cell represents a node in the forest.
+   - The value of the cell indicates the cost of moving through that node (e.g., higher values represent obstacles or difficult terrain).
+   - The starting position of Elara is given as a coordinate (x, y).
+   - The target position (location of the Crystal of Light) is also given as a coordinate (goalX, goalY).
+
+2. **Heuristic Function**: A function that estimates the cost from any node to the goal. You may use the **Manhattan distance** or **Euclidean distance** as your heuristic.
+
+#### Output:
+- The algorithm should return the **shortest path** from the starting position to the target position, including:
+  - The sequence of coordinates representing the path taken.
+  - The total cost of traversing that path.
+
+#### Constraints:
+- Elara can move in four directions: up, down, left, and right.
+- Nodes with higher values are considered more costly to traverse, and nodes with extreme values may be impassable.
+- If a path to the target is not found, return an appropriate message indicating that the treasure is unreachable.
+
+#### Example:
+- **Input Grid**:
+  ```
+  0 1 1 2 3
+  0 0 1 1 0
+  1 0 0 1 0
+  2 1 0 0 0
+  3 1 1 1 0
+  ```
+- **Starting Position**: (0, 0)
+- **Target Position**: (4, 4)
+
+- **Output**: 
+  ```
+  Path: [(0,0), (1,0), (2,0), (2,1), (2,2), (3,2), (4,2), (4,3), (4,4)]
+  Total Cost: 9
+  ```
+
+### Conclusion:
+Implement the A* algorithm to guide Elara through the Enchanted Forest, ensuring she reaches the Crystal of Light in the most efficient way possible while overcoming obstacles along the way!
