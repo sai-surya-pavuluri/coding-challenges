@@ -1,0 +1,25 @@
+Deep in the archives of the Cipher Institute, there’s an ancient tablet inscribed with a letter grid.
+Rumor has it that secret phrases are hidden inside this grid, but there’s a catch:
+
+The phrases can twist and turn in any direction (up, down, left, right).
+
+A special symbol ? acts as a wildcard — a chameleon rune that can become any letter.
+
+Each tile can be stepped on only once during a single search.
+
+Your mission is to write a program that determines if a given phrase (possibly with wildcards) can be traced within the maze.
+Find the phrase, and you unlock the next layer of the Cipher’s secrets. Fail… and the grid remains silent forever.
+
+# Example
+
+Tablet (grid):
+A B C E
+S F C S
+A D E E
+
+Queries:
+"ABCCED"   → True  (Path found)
+"A?CCED"   → True  ('?' matches 'B')
+"SEE"      → True
+"ABCB"     → False
+"?FCE"     → True
