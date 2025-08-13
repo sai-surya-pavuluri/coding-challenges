@@ -1,0 +1,26 @@
+The Monastery of Balanced Seals 🏯
+Premise
+
+You’re an apprentice Sealsmith in the Monastery of Balanced Seals.
+Each seal is forged by pressing open ( and close ) runes onto a strip of parchment.
+
+A seal is valid only if:
+
+No close rune ever appears without a matching open rune before it.
+
+By the end, every open rune has been properly closed.
+
+Your master hands you n pairs of runes and says:
+
+“Forge every distinct valid seal you can. Only balanced seals protect the realm.”
+
+Your Mission
+
+Input: An integer n (1 ≤ n ≤ 8) — the number of rune pairs.
+Output: All distinct balanced seals (strings of length 2n) made from ( and ).
+
+Example
+
+n = 3 → ["((()))","(()())","(())()","()(())","()()()"]
+
+n = 1 → ["()"]
