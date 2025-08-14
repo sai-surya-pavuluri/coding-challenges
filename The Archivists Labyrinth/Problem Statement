@@ -1,0 +1,23 @@
+The Archivist’s Labyrinth: A Unique Permutation Heist 🗝️
+
+Centuries ago, the Archivist sealed a vault of combinatorial relics. The lock isn’t a key; it’s a sequence. But the vault hates duplicates—repeat a sequence, and it resets. Your job: enumerate every unique order of runes (integers), even when some runes are identical… and do it fast.
+
+Premise
+
+You’re a codebreaker in the Clockwork City. Each mission hands you a strip of runes (e.g., [1,1,2]). To open the vault, you must produce every unique permutation. The catch: the vault judges both correctness and swiftness.
+
+Rules of the Vault (Problem)
+
+Input: nums: List[int] (length 1..10, may contain duplicates)
+
+Output: all unique permutations (order of output doesn’t matter)
+
+Baseline is accepted; speed earns rank.
+
+Examples (whispers from old thieves)
+
+[1,1,2] → 3 permutations
+
+[1,2,3] → 6 permutations
+
+[1,1,1,2,2,3] → many, but prune smartly
