@@ -1,0 +1,46 @@
+📖 The Story:
+
+In the ancient Temple of Digits, there’s a mystical lock that guards the Scroll of Infinity.
+The lock isn’t like ordinary locks — it doesn’t accept a single code. Instead, it will only open if you chant aloud all possible secret numbers that obey its rules.
+
+Here’s how the lock works:
+
+The lock demands a number of exactly n digits.
+
+Each pair of consecutive digits in that number must have a difference of exactly k.
+
+The first digit can never be 0 (the lock despises leading zeroes).
+
+If you whisper even one number that breaks these rules, the temple slams shut forever. But if you enumerate all the correct numbers, the lock opens, and the scroll is yours.
+
+🧩 The Challenge (Problem Statement)
+
+You are given two integers n and k.
+Return all valid numbers of length n such that:
+
+No number has leading zeroes.
+
+The absolute difference between every two consecutive digits is exactly k.
+
+Return the list in any order.
+
+🔑 Examples
+
+Example 1
+
+Input: n = 3, k = 7
+
+Output: [181, 292, 707, 818, 929]
+
+Explanation: 070 is invalid (leading zero).
+
+Example 2
+
+Input: n = 2, k = 1
+
+Output: [10,12,21,23,32,34,43,45,54,56,65,67,76,78,87,89,98]
+
+🏹 Constraints
+
+2 <= n <= 9
+0 <= k <= 9
