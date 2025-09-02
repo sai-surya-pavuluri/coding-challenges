@@ -1,0 +1,81 @@
+
+Welcome to Skyport—a sprawling network of floating islands connected by temporary wind-corridors. You’re a contract courier accepting delivery jobs between islands. Each job has a start time, end time, and payout. Corridors are one-way and non-overlapping: you can only fly one job at a time. Pick a subset of non-overlapping jobs that maximizes total payout.
+
+The wind council is stingy with grants, so if you overshoot your time window, the job is void. Choose wisely.
+
+Problem
+
+Given N jobs, each job i has:
+
+start[i] — integer start time
+
+end[i] — integer end time (end[i] > start[i])
+
+payout[i] — positive integer coins
+
+Find the maximum total payout from a subset of non-overlapping jobs. Two jobs i and j overlap if their time intervals intersect strictly, i.e. it is not allowed to have start[j] < end[i] && start[i] < end[j]. However, touching is allowed: if end[i] == start[j], you can take both.
+
+Input Format
+
+Two supported formats (pick one for your implementation/tests):
+
+Format A (compact)
+N
+start1 end1 payout1
+start2 end2 payout2
+...
+startN endN payoutN
+Format B (JSON-like)
+N
+[start1, start2, ..., startN]
+[end1, end2, ..., endN]
+[payout1, payout2, ..., payoutN]
+
+You only need to implement one format; tests below use Format A.
+
+Output
+
+A single integer: the maximum total payout.
+
+Constraints
+
+1 ≤ N ≤ 2 * 10^5 (design your approach to be O(N log N))
+
+Times are int (can be up to ±1e9).
+
+Payouts are int (positive; up to 1e9).
+
+If needed, use 64-bit accumulation (long in Java, int is okay in Python but you may cast to int safely since Python ints are arbitrary precision).
+
+Examples
+Example 1
+
+Input
+
+4
+1 3 50
+3 5 20
+0 6 100
+5 7 200
+
+Explanation: Best is jobs (1,3,50) + (3,5,20) + (5,7,200) = 270. You can chain because touching at boundaries is allowed.
+
+Output
+
+270
+Example 2
+
+Input
+
+5
+1 2 5
+2 3 6
+3 4 5
+1 3 10
+2 5 50
+
+Explanation: Non-overlapping best is (1,2,5) + (2,3,6) + (3,4,5) = 16 vs single (2,5,50). The max is 50.
+
+Output
+
+50
